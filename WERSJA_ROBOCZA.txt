@@ -1,0 +1,25 @@
+WERSJA ROBOCZA - BACKUP
+========================
+
+Data utworzenia: 8 stycznia 2025
+
+Zawartość tej wersji:
+- Kompletna strona do wynajmu autolawet
+- Wszystkie pliki HTML, CSS, JavaScript
+- Zdjęcie autolawety (autolaweta-tlo.jpg) - 2.0MB
+- Wszystkie sekcje: Start, Oferta, Pomoc drogowa, Cennik, Rezerwacja, Kontakt, Oddziały
+- Responsywny design
+- Formularze kontaktowy i rezerwacji
+
+Struktura:
+- index.html (główna strona)
+- styles.css (style z tłem zdjęciowym)
+- script.js (funkcjonalności JavaScript)
+- images/autolaweta-tlo.jpg (zdjęcie tła)
+- images/autolaweta-tlo.svg (backup SVG)
+
+Uwagi:
+- Tło sekcji hero używa zdjęcia autolawety
+- CSS skonfigurowany dla zdjęcia: images/autolaweta-tlo.jpg
+- Gradient overlay dla czytelności tekstu
+- Wszystko gotowe do użycia

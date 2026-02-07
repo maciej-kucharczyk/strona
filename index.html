@@ -1,243 +1,245 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maciej Kucharczyk - Fizjoterapeuta Wrocław</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Wynajem Autolawet - Profesjonalny Transport Pojazdów</title>
+    <link rel="stylesheet" href="styles.css?v=2">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
+
 <body>
     <!-- Navigation -->
     <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <h2>Maciej Kucharczyk</h2>
-                <span>Fizjoterapeuta</span>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="#home">Start</a></li>
-                <li><a href="#services">Usługi</a></li>
-                <li><a href="#about">O mnie</a></li>
-                <li><a href="#contact">Kontakt</a></li>
-                <li><a href="https://www.znanylekarz.pl/maciej-kucharczyk-2/fizjoterapeuta/wroclaw" target="_blank" class="cta-button">Umów wizytę</a></li>
-            </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <img src="images/new-logo.png" alt="Logo" class="nav-logo-img">
+                    <h2>Wynajem Autolawet</h2>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#home">Start</a></li>
+                    <li><a href="#offer">Oferta</a></li>
+
+                    <li><a href="#conditions">Warunki wynajmu</a></li>
+                    <li><a href="#pricing">Cennik</a></li>
+
+                    <li><a href="#contact">Kontakt</a></li>
+
+                </ul>
+                <div class="nav-contact">
+                    <div class="nav-phone">
+                        <span class="phone-label">24h Kontakt</span>
+                        <a href="tel:782838963" class="phone-number">782 838 963</a>
+                    </div>
+                </div>
+                <button class="nav-toggle" id="navToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero Section - Wynajem Autolawet -->
     <section id="home" class="hero">
-        <div class="hero-container">
+        <div class="hero-overlay"></div>
+        <div class="container">
             <div class="hero-content">
-                <h1>Profesjonalna fizjoterapia we Wrocławiu</h1>
-                <p>Specjalizuję się w terapii manualnej Kaltenborn-Evjenth, rehabilitacji, współpracy ze sportowcami oraz treningach personalnych.</p>
-                <div class="hero-buttons">
-                    <a href="https://www.znanylekarz.pl/maciej-kucharczyk-2/fizjoterapeuta/wroclaw" target="_blank" class="btn-primary">Umów wizytę - ZnanyLekarz</a>
-                    <a href="#services" class="btn-secondary">Poznaj usługi</a>
-                </div>
+                <h1 class="hero-title">Wynajem</h1>
+                <h2 class="hero-subtitle-large">Autolawet</h2>
+                <p class="hero-description">
+                    Chcecie Państwo przewieźć niesprawny samochód? Szukacie sposobu na transport pojazdu zza granicy?
+                    Zastanawiacie się jak przewieźć niewygodny ładunek?
+                </p>
+                <a href="#offer" class="btn btn-primary">zobacz więcej</a>
             </div>
-            <div class="hero-image">
-                <div class="hero-photo">
-                    <img src="images/maciej-profile.jpg" alt="Maciej Kucharczyk - Fizjoterapeuta" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                    <div class="hero-placeholder" style="display:none;">
-                        <i class="fas fa-user-md"></i>
+        </div>
+    </section>
+
+    <!-- Wypożyczalnia autolawety -->
+    <section class="rental-section">
+        <div class="container">
+            <div class="section-content">
+                <h2 class="section-title-left">Wypożyczalnia</h2>
+                <h3 class="section-subtitle-left">autolawety</h3>
+                <p class="section-text">
+                    Pragniemy Państwu zaoferować wypożyczenie profesjonalnie przygotowanej autolawety dzięki której
+                    bezproblemowo i na czas przetransportujecie swój pojazd bezpiecznie do miejsca docelowego.
+                </p>
+                <a href="#pricing" class="btn btn-secondary">zobacz więcej</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bezpieczny transport -->
+    <section class="transport-section">
+        <div class="container">
+            <div class="section-content">
+                <h2 class="section-title-left">Bezpieczny</h2>
+                <h3 class="section-subtitle-left">transport</h3>
+                <p class="section-text">
+                    Dzięki autolawecie możecie Państwo w sposób bezpieczny transportować pojazdy i inne ładunki w sposób
+                    komfortowy i bezpieczny a wypożyczenie autolawety w naszej firmie na pewno pomoże Państwu dowieźć
+                    swój pojazd do celu.
+                </p>
+                <a href="#contact" class="btn btn-secondary">zobacz więcej</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 37 miast -->
+    <section class="cities-section">
+        <div class="container">
+            <div class="cities-content">
+                <h2 class="cities-title" style="color: #ffffff; font-weight: 700;">Jesteśmy we Wrocławiu Jagodno ulica
+                    Beaty Artemskiej 11</h2>
+                <p class="cities-text">
+                    Zarezerwuj dogodny termin już teraz! Rezerwacji można dokonać telefonicznie
+                </p>
+                <div class="cities-contact">
+                    <div class="cities-phone">
+                        <strong>782 838 963</strong> lub <strong>693 749 916</strong>
                     </div>
+                </div>
+                <a href="#contact" class="btn btn-primary">Skontaktuj się</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Oferta -->
+    <section id="offer" class="offer-section">
+        <div class="container">
+            <h2 class="section-title">Nasza oferta</h2>
+            <div class="offer-content">
+                <p class="offer-text">
+                    Pilnie potrzebujesz autolawety do przetransportowania samochodu lub jakiejś maszyny? Nie ma
+                    najmniejszych
+                    problemów, ponieważ nasza oferta z pewnością powinna Cię zadowolić. Proponujemy Ci w tym wypadku
+                    autolawety z długością najazdu 4.5m. Radzi sobie ono znakomicie w przypadku przewozu ww. ładunków.
+                    Jego olbrzymią zaletą jest to, iż jest to auto mocno uniwersalne i doskonale sprawdza się w różnych
+                    warunkach, pomieści 6 osób .
+                </p>
+                <a href="#pricing" class="btn btn-secondary">zobacz więcej</a>
+            </div>
+            <div class="offer-flex-wrapper">
+                <div class="offer-highlight">
+                    <div class="offer-price">
+                        <span class="price-amount">350</span>
+                        <span class="price-currency">zł/doba</span>
+                    </div>
+                    <div class="offer-features">
+                        <p>Bez limitów kilometrów</p>
+                        <p>Bezpieczny Transport</p>
+                    </div>
+                </div>
+                <div class="offer-image-container">
+                    <img src="images/offer-car.jpg" alt="Autolaweta" class="offer-car-img">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="services">
+
+
+    <!-- Cennik -->
+    <section id="pricing" class="pricing-section">
         <div class="container">
-            <h2>Moje usługi</h2>
-            <div class="services-grid">
-                <!-- Kaltenborn-Evjenth Manual Therapy -->
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-hands"></i>
-                    </div>
-                    <h3>Terapia manualna Kaltenborn-Evjenth</h3>
-                    <p>Specjalistyczna metoda terapii manualnej skupiająca się na mobilizacji stawów i tkanek miękkich. Skuteczna w leczeniu dysfunkcji układu ruchu.</p>
-                    <ul class="service-benefits">
-                        <li>Mobilizacja stawów</li>
-                        <li>Terapia tkanek miękkich</li>
-                        <li>Leczenie dysfunkcji kręgosłupa</li>
-                        <li>Przywracanie prawidłowej biomechaniki</li>
-                    </ul>
-                </div>
+            <h2 class="section-title">Cennik</h2>
+            <p class="section-subtitle">Sprawdź konkurencyjne ceny</p>
 
-                <!-- Rehabilitation -->
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-heartbeat"></i>
+            <div class="pricing-table">
+                <div class="pricing-column">
+                    <h3>Autolaweta</h3>
+                    <div class="pricing-price">
+                        <span class="price-main">350 zł</span>
+                        <span class="price-period">/doba - brak limitu kilometrów</span>
                     </div>
-                    <h3>Rehabilitacja</h3>
-                    <p>Kompleksowa rehabilitacja po urazach, operacjach oraz w chorobach przewlekłych układu ruchu. Indywidualnie dopasowane programy terapeutyczne.</p>
-                    <ul class="service-benefits">
-                        <li>Rehabilitacja pooperacyjna</li>
-                        <li>Leczenie urazów sportowych</li>
-                        <li>Terapia bólu przewlekłego</li>
-                        <li>Przywracanie pełnej sprawności</li>
+                    <ul class="pricing-features">
+                        <li>Autolaweta z długością najazdu 4.50m</li>
+                        <li>Wyciągarka z bezprzewodowym pilotem</li>
+                        <li>6-cio osobowa kabina</li>
                     </ul>
-                </div>
-
-                <!-- Sports Collaboration -->
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-running"></i>
-                    </div>
-                    <h3>Współpraca ze sportowcami</h3>
-                    <p>Specjalistyczna opieka nad sportowcami - profilaktyka urazów, optymalizacja wydolności oraz szybki powrót do aktywności po kontuzjach.</p>
-                    <ul class="service-benefits">
-                        <li>Profilaktyka urazów sportowych</li>
-                        <li>Optymalizacja wydolności</li>
-                        <li>Szybka regeneracja</li>
-                        <li>Analiza biomechaniczna</li>
-                    </ul>
-                </div>
-
-                <!-- Personal Training -->
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-dumbbell"></i>
-                    </div>
-                    <h3>Treningi personalne</h3>
-                    <p>Indywidualnie zaprojektowane programy treningowe uwzględniające cele zdrowotne i sportowe. Bezpieczny trening pod okiem specjalisty.</p>
-                    <ul class="service-benefits">
-                        <li>Trening funkcjonalny</li>
-                        <li>Korekcja wad postawy</li>
-                        <li>Wzmacnianie stabilizacji</li>
-                        <li>Programy dla każdego poziomu</li>
-                    </ul>
+                    <a href="#contact" class="btn btn-primary btn-full">zadzwoń</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
+    <!-- Warunki wynajmu -->
+    <section id="conditions" class="conditions-section">
         <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h2>O mnie</h2>
-                    <p>Jestem Maciej Kucharczyk, fizjoterapeutą z wieloletnim doświadczeniem w pracy z pacjentami o różnorodnych potrzebach zdrowotnych. Specjalizuję się w nowoczesnych metodach terapii manualnej oraz kompleksowej rehabilitacji.</p>
-                    
-                    <div class="qualifications">
-                        <h3>Kwalifikacje</h3>
-                        <ul>
-                            <li>Magister fizjoterapii</li>
-                            <li>Certyfikat terapii manualnej Kaltenborn-Evjenth</li>
-                            <li>Specjalizacja w rehabilitacji sportowej</li>
-                            <li>Trener personalny z licencją</li>
-                        </ul>
-                    </div>
-
-                    <div class="experience">
-                        <h3>Doświadczenie</h3>
-                        <p>Współpracuję z klubami sportowymi, indywidualnymi sportowcami oraz pacjentami wymagającymi rehabilitacji. Moje podejście łączy najnowsze osiągnięcia nauki z praktycznym doświadczeniem klinicznym.</p>
-                    </div>
-                </div>
-                <div class="about-image">
-                    <div class="about-photo">
-                        <img src="images/maciej-profile.jpg" alt="Maciej Kucharczyk - Fizjoterapeuta" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="about-placeholder" style="display:none;">
-                            <i class="fas fa-user-md"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Booking Section -->
-    <section id="booking" class="booking">
-        <div class="container">
-            <h2>Umów wizytę online</h2>
-            <p>Skorzystaj z wygodnego systemu rezerwacji wizyt przez ZnanyLekarz</p>
-            
-            <div class="booking-container">
-                <div class="booking-info">
-                    <h3>Dlaczego warto wybrać wizytę online?</h3>
+            <h2 class="section-title">Warunki wynajmu</h2>
+            <div class="conditions-content">
+                <div class="condition-item">
+                    <h3>Wymagania</h3>
                     <ul>
-                        <li><i class="fas fa-clock"></i> Dostępne terminy 24/7</li>
-                        <li><i class="fas fa-calendar-check"></i> Łatwa zmiana terminu</li>
-                        <li><i class="fas fa-bell"></i> Automatyczne przypomnienia</li>
-                        <li><i class="fas fa-mobile-alt"></i> Rezerwacja z telefonu</li>
+                        <li>Prawo jazdy kategorii B (minimum 2 lata)</li>
+                        <li>Dokument tożsamości</li>
+                        <li>Kaucja zwrotna</li>
                     </ul>
                 </div>
-                
-                <div class="booking-widget">
-                    <div class="znany-lekarz-widget">
-                        <h4>Rezerwacja przez ZnanyLekarz</h4>
-                        <p>Kliknij poniżej, aby przejść do systemu rezerwacji:</p>
-                        <a href="https://www.znanylekarz.pl/maciej-kucharczyk-2/fizjoterapeuta/wroclaw" target="_blank" class="booking-btn" onclick="window.open(this.href, '_blank'); return false;">
-                            <i class="fas fa-calendar-plus"></i>
-                            🗓️ UMÓW WIZYTĘ TERAZ
-                        </a>
-                        <br><br>
-                        <a href="https://www.znanylekarz.pl/maciej-kucharczyk-2/fizjoterapeuta/wroclaw" target="_blank" class="booking-btn-secondary" onclick="window.open(this.href, '_blank'); return false;">
-                            <i class="fas fa-external-link-alt"></i>
-                            Zobacz profil na ZnanyLekarz
-                        </a>
-                        <p class="booking-note">Zostaniesz przekierowany na stronę ZnanyLekarz</p>
-                    </div>
+                <div class="condition-item">
+                    <h3>Zakres usługi</h3>
+                    <ul>
+                        <li>Autolaweta z długością najazdu 4.50m</li>
+                        <li>Wyciągarka z bezprzewodowym pilotem</li>
+                        <li>6-cio osobowa kabina</li>
+                    </ul>
+                </div>
+                <div class="condition-item">
+                    <h3>Dodatkowe informacje</h3>
+                    <ul>
+                        <li>Bez limitów kilometrów (opcja doba)</li>
+                        <li>Ubezpieczenie OC</li>
+                        <li>Wsparcie 24/7</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
+    <!-- Kontakt -->
+    <section id="contact" class="contact-section">
         <div class="container">
-            <h2>Kontakt</h2>
-            <div class="contact-content">
+            <h2 class="section-title">Kontakt</h2>
+            <div class="contact-wrapper">
                 <div class="contact-info">
                     <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
+                        <div class="contact-icon">📞</div>
                         <div>
-                            <h4>Email</h4>
-                            <a href="mailto:maciek11505@gmail.com">maciek11505@gmail.com</a>
+                            <h3>Telefon całodobowo</h3>
+                            <p><a href="tel:782838963">782 838 963</a></p>
+                            <p><a href="tel:693749916">693 749 916</a></p>
                         </div>
                     </div>
-                    
                     <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="contact-icon">📍</div>
                         <div>
-                            <h4>Lokalizacja</h4>
-                            <p>Wrocław</p>
+                            <h3>Oddział</h3>
+                            <p>Wrocław ul. Beaty Artemskiej 11</p>
+                            <p>52-234</p>
                         </div>
                     </div>
-                    
                     <div class="contact-item">
-                        <i class="fas fa-calendar-alt"></i>
+                        <div class="contact-icon">🕒</div>
                         <div>
-                            <h4>Rezerwacja wizyt</h4>
-                            <a href="https://www.znanylekarz.pl/maciej-kucharczyk-2/fizjoterapeuta/wroclaw" target="_blank">ZnanyLekarz.pl</a>
+                            <h3>Godziny Pracy</h3>
+                            <p>Poniedziałek - Niedziela</p>
+                            <p>24 godziny na dobę</p>
                         </div>
                     </div>
                 </div>
-                
-                <div class="contact-form">
-                    <h3>Napisz do mnie</h3>
-                    <form>
-                        <div class="form-group">
-                            <input type="text" name="name" placeholder="Imię i nazwisko" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" name="email" placeholder="Email" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea name="message" placeholder="Wiadomość" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn-primary">Wyślij wiadomość</button>
-                    </form>
+
+                <div class="contact-map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2506.592506042976!2d17.0326689!3d51.0786509!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470fc2a5f573587b%3A0x8e8a6081559f5e5!2sul.%20Beaty%20Artemskiej%2011%2C%2052-234%20Wroc%C5%82aw!5e0!3m2!1spl!2spl!4v1706082000000!5m2!1spl!2spl"
+                        width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </div>
@@ -247,36 +249,47 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-info">
-                    <h3>Maciej Kucharczyk</h3>
-                    <p>Fizjoterapeuta Wrocław</p>
-                    <p>Email: <a href="mailto:maciek11505@gmail.com">maciek11505@gmail.com</a></p>
+                <div class="footer-section">
+                    <h3>Wynajem Autolawet</h3>
+                    <p>Chcecie Państwo przewieźć niesprawny samochód? Szukacie sposobu na transport pojazdu zza granicy?
+                        Zastanawiacie się jak przewieźć niewygodny ładunek?</p>
                 </div>
-                <div class="footer-links">
-                    <h4>Szybkie linki</h4>
+                <div class="footer-section">
+                    <h4>Nawigacja</h4>
                     <ul>
-                        <li><a href="#services">Usługi</a></li>
-                        <li><a href="#about">O mnie</a></li>
-                        <li><a href="#booking">Umów wizytę</a></li>
+                        <li><a href="#home">Start</a></li>
+                        <li><a href="#offer">Oferta</a></li>
+
+                        <li><a href="#pricing">Cennik</a></li>
+
                         <li><a href="#contact">Kontakt</a></li>
+
                     </ul>
                 </div>
-                <div class="footer-services">
-                    <h4>Specjalizacje</h4>
+                <div class="footer-section">
+                    <h4>Kontakt</h4>
                     <ul>
-                        <li>Terapia manualna Kaltenborn-Evjenth</li>
-                        <li>Rehabilitacja</li>
-                        <li>Współpraca ze sportowcami</li>
-                        <li>Treningi personalne</li>
+                        <li>📞 <a href="tel:782838963">782 838 963</a></li>
+                        <li>📞 <a href="tel:693749916">693 749 916</a></li>
+                        <li>🕒 24h / 7 dni w tygodniu</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Usługi</h4>
+                    <ul>
+                        <li>Wynajem autolawet</li>
+
+                        <li>Transport pojazdów</li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Maciej Kucharczyk - Fizjoterapeuta. Wszystkie prawa zastrzeżone.</p>
+                <p>&copy; 2026 Wynajem Autolawety. Wszystkie prawa zastrzeżone.</p>
             </div>
         </div>
     </footer>
 
     <script src="script.js"></script>
 </body>
+
 </html>
