@@ -27,10 +27,23 @@
     /* Dark Gray for cards */
     --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
     --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.3);
+    /* approximate height of the fixed navbar (adjusted per breakpoint below) */
+    --nav-safe: 140px;
 }
 
 html {
     scroll-behavior: smooth;
+}
+
+/* Ensure fragment navigation (anchors) accounts for fixed navbar height */
+html {
+    scroll-padding-top: calc(var(--nav-safe) + 8px);
+}
+
+/* Apply scroll offset to all sections with id so clicking nav links shows full heading */
+section[id],
+.hero {
+    scroll-margin-top: calc(var(--nav-safe) + 8px);
 }
 
 body {
@@ -39,6 +52,7 @@ body {
     color: var(--text-light);
     background-color: var(--bg-section);
     overflow-x: hidden;
+    padding-top: var(--nav-safe);
 }
 
 .container {
@@ -181,11 +195,11 @@ a {
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment: scroll;
     color: var(--white);
     text-align: center;
-    padding-top: 100px;
-    padding-bottom: 80px;
+    padding-top: 12px;
+    padding-bottom: clamp(40px, 10vh, 100px);
     overflow: hidden;
 }
 
@@ -217,32 +231,127 @@ a {
     position: relative;
     z-index: 2;
     max-width: 900px;
+    margin-top: clamp(30px, 8vh, 90px);
     animation: fadeInUp 1s ease;
 }
 
 .hero-title {
-    font-size: 4rem;
+    font-size: clamp(1.8rem, 6vw, 4rem);
     font-weight: 300;
     margin-bottom: 0.5rem;
     line-height: 1.2;
     color: var(--white);
+    overflow-wrap: anywhere;
+    word-break: break-word;
 }
 
 .hero-subtitle-large {
-    font-size: 5rem;
+    font-size: clamp(2.2rem, 10vw, 5rem);
     font-weight: 700;
     margin-bottom: 2rem;
     line-height: 1.1;
     color: var(--primary-color);
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    overflow-wrap: anywhere;
+    word-break: break-word;
 }
 
 .hero-description {
-    font-size: 1.25rem;
+    font-size: clamp(0.95rem, 3vw, 1.25rem);
     margin-bottom: 2.5rem;
     opacity: 0.95;
-    line-height: 1.8;
+    line-height: 1.6;
     color: #e5e7eb;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+/* Responsive tweaks for hero to improve readability on small devices */
+@media (min-width: 1024px) {
+    .hero {
+        background-attachment: fixed;
+    }
+}
+
+@media (max-width: 900px) {
+    .hero {
+        background-position: center top;
+        align-items: flex-start;
+        min-height: auto;
+        padding-top: 56px; /* allow space for fixed navbar */
+        padding-bottom: 48px;
+    }
+    .hero-content {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        line-height: 1.05;
+    }
+    .hero-subtitle-large {
+        margin-bottom: 1rem;
+    }
+    .hero-description {
+        font-size: clamp(0.9rem, 3.5vw, 1rem);
+    }
+    .nav-logo-img {
+        height: 80px;
+    }
+}
+
+/* Adjust nav-safe variable per breakpoint so hero is not covered by navbar */
+@media (max-width: 900px) {
+    :root { --nav-safe: 110px; }
+    .nav-logo-img { height: 100px; }
+}
+
+@media (max-width: 480px) {
+    :root { --nav-safe: 88px; }
+    .nav-logo-img { height: 80px; }
+}
+
+@media (max-width: 360px) {
+    :root { --nav-safe: 72px; }
+    .nav-logo-img { height: 64px; }
+}
+
+/* Tablet-specific tweaks */
+@media (max-width: 1024px) and (min-width: 601px) {
+    .hero {
+        align-items: flex-start;
+        min-height: 60vh;
+        padding-top: 64px; /* leave room for navbar */
+        padding-bottom: 48px;
+    }
+    .hero-content {
+        margin-top: 24px;
+    }
+    .hero-title {
+        font-size: clamp(1.6rem, 4.5vw, 3rem);
+    }
+    .hero-subtitle-large {
+        font-size: clamp(1.8rem, 6.5vw, 3.5rem);
+    }
+}
+
+/* Small phones - ensure compact layout */
+@media (max-width: 360px) {
+    .hero {
+        padding-top: 48px;
+        padding-bottom: 36px;
+    }
+    .hero-title {
+        font-size: clamp(1.2rem, 6.5vw, 1.6rem);
+    }
+    .hero-subtitle-large {
+        font-size: clamp(1.4rem, 8.5vw, 2rem);
+    }
+    .hero-content {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
 }
 
 /* Rental & Transport Sections */

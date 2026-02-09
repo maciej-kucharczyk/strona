@@ -8,6 +8,20 @@ if (navToggle) {
     });
 }
 
+// Keep CSS variable --nav-safe in sync with actual navbar height
+function updateNavSafe() {
+    const nav = document.querySelector('.navbar');
+    if (!nav) return;
+    const navHeight = Math.ceil(nav.getBoundingClientRect().height);
+    document.documentElement.style.setProperty('--nav-safe', navHeight + 'px');
+}
+
+window.addEventListener('resize', updateNavSafe);
+document.addEventListener('DOMContentLoaded', () => {
+    updateNavSafe();
+});
+if (navToggle) navToggle.addEventListener('click', () => setTimeout(updateNavSafe, 250));
+
 // Close mobile menu when clicking on a link
 const navLinks = document.querySelectorAll('.nav-menu a');
 navLinks.forEach(link => {
@@ -22,11 +36,11 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
-            const offsetTop = target.offsetTop - 80;
-            window.scrollTo({
-                top: offsetTop,
-                behavior: 'smooth'
-            });
+            const nav = document.querySelector('.navbar');
+            const navHeight = nav ? Math.ceil(nav.getBoundingClientRect().height) : 0;
+            const extra = 8; // small gap under navbar
+            const targetY = target.getBoundingClientRect().top + window.pageYOffset - navHeight - extra;
+            window.scrollTo({ top: targetY, behavior: 'smooth' });
         }
     });
 });
@@ -118,6 +132,13 @@ if (branchSelect) {
                     top: offsetTop,
                     behavior: 'smooth'
                 });
+
+                // Better scroll using actual navbar height
+                const nav = document.querySelector('.navbar');
+                const navHeight = nav ? Math.ceil(nav.getBoundingClientRect().height) : 0;
+                const extra = 8;
+                const targetY = reservationSection.getBoundingClientRect().top + window.pageYOffset - navHeight - extra;
+                window.scrollTo({ top: targetY, behavior: 'smooth' });
                 
                 // Pre-fill branch in reservation form
                 const resBranchSelect = document.getElementById('res-branch');
