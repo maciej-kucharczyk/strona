@@ -432,10 +432,19 @@ a {
 }
 
 .cities-phone {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    align-items: center;
     font-size: 2rem;
     font-weight: 700;
     margin-bottom: 1rem;
     color: var(--primary-color);
+}
+
+.cities-phone-number {
+    display: block;
+    line-height: 1;
 }
 
 .cities-email {
